@@ -1,0 +1,181 @@
+.bg{
+    background: linear-gradient(90deg, rgba(66,13,13,1) 0%, rgba(108,8,8,1) 50%, rgba(66,13,13,1) 100%);
+    /*
+    background: linear-gradient(90deg, rgba(66,13,13,1) 0%, rgba(167,54,54,1) 50%, rgba(66,13,13,1) 100%);*/
+    /*background: linear-gradient(90deg, rgba(66,13,13,1) 0%, rgba(240,54,54,1) 51%, rgba(66,13,13,1) 100%);
+   /* background: linear-gradient(150deg, rgba(209, 4, 55, 0.774),#000000);*/
+    /*background: linear-gradient(150deg, rgba(172, 60, 246,0.2),#06061a); */
+}
+.hero{
+    display: flex;
+    padding-inline: 1.25rem;
+    padding-top: 6rem;
+    overflow: hidden;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+.hero_left{
+    flex: 1;
+}
+
+.hero_right{
+   flex: 1;
+}
+
+.hero_up{
+    color: #e6d707;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero_title{
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-top: 0.75rem;
+}
+.hero_desc{
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-weight: 300;
+    line-height: calc(1em + 0.5rem);
+    margin-block: 1.5rem;
+    max-width: 55ch;
+}
+
+.hero_btn {
+    margin-top: 1em;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(27, 27, 27) 0%, rgb(112, 15, 15) 50%, rgb(36, 2, 2) 100%);;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .hero_btn:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #7a00ff,
+      #000,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .hero_btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(15, 15, 15) 0%, rgb(112, 15, 15) 50%, rgb(31, 1, 1) 100%);;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  .saku-img{
+    margin-top: 60px;
+  }
+  .nf1{
+    width: 50%;
+    margin-bottom: 22px;
+  }
+  .nf2{
+    width: 42%;
+  }
+
+/*.hero_btn{
+    font-size: 1rem;
+    background: linear-gradient(to right, #e8546b,#ac3cf6);
+    padding: 0.5em 2em;
+    border-radius: 6px;
+    color: #000;
+
+    
+}
+*/
+
+/*Hero Right */
+
+.hero_img{
+    max-width: 450px;
+    margin-left: 350px;
+    background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgba(110, 26, 26, 0.719) 50%,
+    transparent 99%
+    );
+    border-radius: 0.75em;
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+@media (max-width: 1024px){
+    .hero{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .hero_title{
+        max-width: 20ch;
+    }
+    .hero_img{
+        width: 90%;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+    .nf1{
+      max-width: 200px;
+    }
+    .nf2{
+      max-width: 200px;
+    }
+}
+
+@media (min-width: 1025px){
+  .nf1{
+    min-width: 200px;
+  }
+  .nf2{
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 475px){
+    .hero_title{
+        font-size: 2.5rem;
+    }
+}

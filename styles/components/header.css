@@ -1,0 +1,62 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1.25rem;
+    padding-block: 1.5rem;
+    align-items: center;
+    max-width: 1366px;
+    margin-inline: auto;
+}
+
+.header_logo{
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: 'Gang of Three', sans-serif;  
+    letter-spacing: 3px;                                            
+}
+
+.nav_ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.203), rgba(134, 4, 4, 0.411));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 20px
+}
+.nav_a{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 22px;
+}
+.nav_a::after{
+    content: "";
+    display: block;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(150deg, rgba(212, 8, 52, 0.966),#ffffff);
+    transition: .3s;
+}
+.nav_a:hover::after{
+    width: 100%;
+}
+
+.header_icon_btn{
+    display: none;
+}
+.header_icon{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+@media (max-width: 768px){
+    .header_nav{
+        display: none;
+    }
+    .header_icon_btn{
+        display: block;
+    }
+}
